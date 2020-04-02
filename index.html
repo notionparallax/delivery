@@ -8,36 +8,151 @@
 </head>
 
 <body>
-    <!-- Set up a container element for the button -->
-    <div id="paypal-button-container"></div>
+    <h1>Mix Maison</h1>
+    <div class="drinks-container">
+        <div class="drink">
+            <img src="https://placebear.com/300/300">
+            <div class="som-notes">Highball: gin, sencha, sherbert, lemon</div>
+            <div class="label">Esenchal Worker</div>
+        </div>
+        <div class="drink">
+            <img src="https://placebear.com/300/301">
+            <div class="som-notes">Highball: vodka, mastic, rosemary, lemon, soda</div>
+            <div class="label">Autoerotic Mastication</div>
+        </div>
+        <div class="drink">
+            <img src="https://placebear.com/300/302">
+            <div class="som-notes">Straight up: vodka, darjeeling, vermouth, lemon</div>
+            <div class="label">Sanitea</div>
+        </div>
+        <div class="drink">
+            <img src="https://placebear.com/300/303">
+            <div class="som-notes">On a rock: bourbon, date, bitters</div>
+            <div class="label">Zoom Date</div>
+        </div>
+        <div class="drink">
+            <img src="https://placebear.com/300/304">
+            <div class="som-notes">Frozen: tequila, jalapeno, strawberry</div>
+            <div class="label">Vaccine</div>
+        </div>
+        <div class="drink">
+            <p class="instructions">Pick the cocktail you want and add it to your wino's shopping trolley. If you want more than one, just keep adding.</p>
+            <form class="pay" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="XU6HBLETMHXKW">
+                <table>
+                <tr><td><input type="hidden" name="on0" value="Drinkie 1">Pick a cocktail</td></tr><tr><td><select name="os0">
+                    <option value="Esenchal Worker">Esenchal Worker $10.00 AUD</option>
+                    <option value="Autoerotic Mastication">Autoerotic Mastication $10.00 AUD</option>
+                    <option value="Sanitea">Sanitea $10.00 AUD</option>
+                    <option value="Zoom date">Zoom date $10.00 AUD</option>
+                    <option value="Vaccine">Vaccine $10.00 AUD</option>
+                </select> </td></tr>
+                </table>
+                <input type="hidden" name="currency_code" value="AUD">
+                <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+            </form>            
+        </div>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Righteous&family=Titan+One&display=swap');
+        * {
+            /* outline: 1px solid orange; */
+        }
+        div,
+        p{
+            background: transparent;
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            outline: 0;
+            padding: 0;
+            vertical-align: baseline;
+        }
+        body {
+            background-image: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
+            /* height: 100vh; */
+            width: 100vw;
+            font-family: 'Concert One', cursive;
+            font-size: 21px;
+            color: white;
+        }
+        h1 {
+            font-family: 'Righteous', cursive;
+            font-size: 300%;
+        }
+        .pay {
+            text-align: center;
+        }
+        .drinks-container {
+            max-width: 50em;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: auto;
+            align-content: start
+        }
+        .instructions {
+            padding: 1em;
+        }
+        .pay table {
+            width: 100%;
+        }
+        .drink { 
+            flex: 0 0 auto;
+            display: inline-block;
+            height: 34vh;
+            margin: 1vw;
+            position: relative;
+            vertical-align: bottom;
+            width:30%;
+        }
+        .drink img {
+            border-radius: 1em;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+        .drink .label {
+            bottom: 0.5em;
+            font-size: 125%;
+            left: 0.5em;
+            position: absolute;
+            z-index: 500;
+        }
+        .drink .som-notes {
+            height: calc(100% - 2em);
+            left: 0;
+            opacity: 0;
+            padding: 1em;
+            position: absolute;
+            top: 0;
+            transition: all 0.4s;
+            width: calc(100% - 2em);
+            z-index: 100;
+            background-image: linear-gradient(-135deg,hsla(246, 100%, 39%, 0.5),
+                                                      hsla(302, 100%, 36%, 0.5),
+                                                      hsla(0, 100%, 48%, 0.5));
+            border-radius: 1em;
+        }
+        .drink .som-notes:hover {
+            opacity: 1;
+        }
+
+        select {
+            width: 100%;
+        }
+    </style>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AWAkDYSh0ymJrHZcahRurQCX_VcEftVKQfCGUsF4FHZZqM1Gd-eHCsotBdhGh5q7mJQw5wkJ-u0LRJJD"></script>
+    
 
     <!-- Include the PayPal JavaScript SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
 
-    <script>
-        // Render the PayPal button into #paypal-button-container
-        paypal.Buttons({
-
-            // Set up the transaction
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '0.01'
-                        }
-                    }]
-                });
-            },
-
-            // Finalize the transaction
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-
-
-        }).render('#paypal-button-container');
-    </script>
+    
 </body>
