@@ -58,9 +58,6 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Righteous&family=Titan+One&display=swap');
-        * {
-            /* outline: 1px solid orange; */
-        }
         div,
         p{
             background: transparent;
@@ -109,7 +106,17 @@
             margin: 1vw;
             position: relative;
             vertical-align: bottom;
-            width:30%;
+                width: 100%;
+        }
+         @media only screen and (min-device-width: 500px) and (max-device-width: 830px) {
+            .drink { 
+                width: 47.5%;
+            }
+        }
+        @media only screen and (min-device-width: 830px) {
+            .drink { 
+                width: 30%;
+            }
         }
         .drink img {
             border-radius: 1em;
