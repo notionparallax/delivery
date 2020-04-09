@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Righteous&family=Titan+One&display=swap");
+@import url(https://reset5.googlecode.com/hg/reset.min.css);
 
 :root {
   --sick-as-pink: hsla(297, 100%, 48%, 0.9);
