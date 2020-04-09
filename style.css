@@ -11,7 +11,7 @@ p {
 }
 body {
   background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
-  /* height: 100vh; */
+  background-size: 120% 150%;
   width: 100vw;
   font-family: "Concert One", cursive;
   font-size: 21px;
@@ -35,9 +35,12 @@ h1 {
   align-content: start;
 }
 .instructions {
-  padding: 1em;
+  padding: 0.6em 0.6em 0 0.6em;
 }
 .pay table {
+  width: 100%;
+}
+input[type="text"] {
   width: 100%;
 }
 .drink {
@@ -139,4 +142,31 @@ body.thank-you-page {
   animation-fill-mode: none;
   animation-play-state: running;
   animation-name: sexySlide;
+}
+
+.thank-you-page p {
+  padding-right: 2em;
+  margin-bottom: 1em;
+}
+p.order-another {
+  text-align: center;
+}
+.thank-you-page a {
+  text-decoration: none;
+  color: white;
+}
+p.order-another a {
+  border-radius: 0.3em;
+  border: 0.2em solid white;
+  color: white;
+  display: inline-block;
+  padding: 0.5em 2em;
+  transition: all;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0, 0, 0.65, 2.74);
+  background-color: hsla(0, 0%, 100%, 0);
+}
+p.order-another a:hover {
+  background-color: hsla(0, 0%, 100%, 0.8);
+  color: #e700f3;
 }
