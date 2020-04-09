@@ -124,6 +124,11 @@ select {
     background-position: 0% 23%;
   }
 }
+.explainer {
+  max-width: 26em;
+  margin: auto;
+  padding: 0 1em 4em;
+}
 
 /* thanks page */
 img.thanks-dude {
