@@ -145,6 +145,22 @@
         being domestic! Be fancy for your Zoom happy hour, or drown your</p>
       </p>
     </div>
+    <p class="order-another">
+      <button class="button" id="bears-button">🐻 I want this website to have more bears!! 🐻</button>
+      <script>
+        document.addEventListener(
+          "DOMContentLoaded",
+          function() {
+            document.getElementById("bears-button")
+                    .addEventListener("click",
+                      (ev)=>{
+                        ev.preventDefault();
+                        alert("Are you mad? There's so many bears already!");
+                      });
+          });
+      </script>
+    </p>
+    
 
     <script src="https://www.paypal.com/sdk/js?client-id=AWAkDYSh0ymJrHZcahRurQCX_VcEftVKQfCGUsF4FHZZqM1Gd-eHCsotBdhGh5q7mJQw5wkJ-u0LRJJD"></script>
 

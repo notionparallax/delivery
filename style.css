@@ -161,18 +161,20 @@ p.order-another {
   text-decoration: none;
   color: white;
 }
-p.order-another a {
+.button {
+  background-color: hsla(0, 0%, 100%, 0);
   border-radius: 0.3em;
   border: 0.2em solid white;
   color: white;
   display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
   padding: 0.5em 2em;
-  transition: all;
   transition-duration: 0.7s;
   transition-timing-function: cubic-bezier(0, 0, 0.65, 2.74);
-  background-color: hsla(0, 0%, 100%, 0);
+  transition: all;
 }
-p.order-another a:hover {
+.button:hover {
   background-color: hsla(0, 0%, 100%, 0.8);
   color: #e700f3;
 }
