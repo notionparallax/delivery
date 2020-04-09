@@ -15,8 +15,9 @@ body {
   color: white;
   font-family: "Concert One", cursive;
   font-size: 21px;
+  margin: 0;
   padding-bottom: 10em;
-  width: 100vw;
+  padding: 0 1em;
 }
 h1 {
   font-family: "Righteous", cursive;
