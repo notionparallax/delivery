@@ -42,31 +42,31 @@
     <div class="drinks-container">
       <div class="drink">
         <img src="https://placebear.com/300/300" />
-        <div class="som-notes">Highball: gin, sencha, sherbert, lemon</div>
+        <div class="som-notes"><p>Highball: gin, sencha, sherbert, lemon</p></div>
         <div class="label">Esenchal Worker</div>
       </div>
       <div class="drink">
         <img src="https://placebear.com/300/301" />
-        <div class="som-notes">
-          Highball: vodka, mastic, rosemary, lemon, soda
+        <div class="som-notes"><p>
+          Highball: vodka, mastic, rosemary, lemon, soda</p>
         </div>
         <div class="label">Autoerotic Mastication</div>
       </div>
       <div class="drink">
         <img src="https://placebear.com/300/302" />
-        <div class="som-notes">
-          Straight up: vodka, darjeeling, vermouth, lemon
+        <div class="som-notes"><p>
+          Straight up: vodka, darjeeling, vermouth, lemon</p>
         </div>
         <div class="label">Sanitea</div>
       </div>
       <div class="drink">
         <img src="https://placebear.com/300/303" />
-        <div class="som-notes">On a rock: bourbon, date, bitters</div>
+        <div class="som-notes"><p>On a rock: bourbon, date, bitters</p></div>
         <div class="label">Zoom Date</div>
       </div>
       <div class="drink">
         <img src="https://placebear.com/300/304" />
-        <div class="som-notes">Frozen: tequila, jalapeno, strawberry</div>
+        <div class="som-notes"><p>Frozen: tequila, jalapeno, strawberry</p></div>
         <div class="label">Vaccine</div>
       </div>
       <div class="drink">
@@ -147,7 +147,7 @@
       </p>
     </div>
     <p class="order-another">
-      <button class="button" id="bears-button">🐻 I want this website to have more bears!! 🐻</button>
+      <button class="button bears" id="bears-button">🐻 I want this website to have more bears!! 🐻</button>
       <script>
         document.addEventListener(
           "DOMContentLoaded",
@@ -156,7 +156,14 @@
                     .addEventListener("click",
                       (ev)=>{
                         ev.preventDefault();
-                        alert("Are you mad? There's so many bears already!");
+                        let b = ev.target
+                        if(b.classList.contains("bears")) {
+                          alert("Are you mad? There's so many bears already!");
+                          b.innerText = "🍸 OK, that's enough, put the drinks back 🍸";
+                        } else {
+                          b.innerText = "🐻 I want this website to have more bears!! 🐻";
+                        }
+                        b.classList.toggle("bears");
                       });
           });
       </script>
