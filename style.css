@@ -16,8 +16,7 @@ body {
   font-family: "Concert One", cursive;
   font-size: 21px;
   margin: 0;
-  padding-bottom: 10em;
-  padding: 0 1em;
+  padding: 0 1em 10em 1em;
 }
 h1 {
   font-family: "Righteous", cursive;
@@ -108,6 +107,12 @@ input[type="text"] {
 .drink .som-notes:hover {
   opacity: 1;
   mix-blend-mode: lighten;
+}
+.som-notes p {
+  background-color: aquamarine;
+  display: inline;
+  mix-blend-mode: luminosity;
+  outline: 7px solid aquamarine;
 }
 
 select {
