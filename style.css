@@ -135,9 +135,9 @@ input[type="text"] {
   opacity: 1;
 }
 .som-notes p {
-  background-color: var(--sick-as-pink);
+  /* background-color: var(--sick-as-pink); */
   display: inline;
-  outline: 7px solid var(--sick-as-pink);
+  /* outline: 7px solid var(--sick-as-pink); */
 }
 
 select {
