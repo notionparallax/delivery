@@ -42,21 +42,26 @@
     <div class="drinks-container">
       <div class="drink">
         <img src="https://placebear.com/300/300" />
-        <div class="som-notes"><p>Highball: gin, sencha, sherbert, lemon</p></div>
-        <div class="label">Esenchal Worker</div>
-      </div>
+        <div class="som-notes">
+          <p>Highball: gin, sencha, sherbert, lemon</p>
+        </div>
         <div class="label"><span>Esenchal Worker</span></div>
+      </div>
       <div class="drink">
         <img src="https://placebear.com/300/301" />
-        <div class="som-notes"><p>
-          Highball: vodka, mastic, rosemary, lemon, soda</p>
+        <div class="som-notes">
+          <p>
+            Highball: vodka, mastic, rosemary, lemon, soda
+          </p>
         </div>
         <div class="label"><span>Autoerotic Mastication</span></div>
       </div>
       <div class="drink">
         <img src="https://placebear.com/300/302" />
-        <div class="som-notes"><p>
-          Straight up: vodka, darjeeling, vermouth, lemon</p>
+        <div class="som-notes">
+          <p>
+            Straight up: vodka, darjeeling, vermouth, lemon
+          </p>
         </div>
         <div class="label"><span>Sanitea</span></div>
       </div>
@@ -67,10 +72,11 @@
       </div>
       <div class="drink">
         <img src="https://placebear.com/300/304" />
-        <div class="som-notes"><p>Frozen: tequila, jalapeno, strawberry</p></div>
-        <div class="label">Vaccine</div>
-      </div>
+        <div class="som-notes">
+          <p>Frozen: tequila, jalapeno, strawberry</p>
+        </div>
         <div class="label"><span>Vaccine</span></div>
+      </div>
       <div class="drink">
         <p class="instructions">
           Pick the cocktail you want and add it to your wino's shopping trolley.
@@ -141,12 +147,13 @@
     <div class="explainer">
       <h2>So, what's the deal here?</h2>
       <p>
-        Quarantine makes us all <abbr title="In all the ways.">thirsty</abbr> and
-        we've got a solution. If you live in Marrickville, order a cocktail and 
-        we'll drop one over. It'll come with the most beautiful block of ice 
-        you've ever seen, and a garnish. There's no need to be drab if you're 
-        being domestic! Be fancy for your Zoom happy hour, or add a bit of 
-        sparkle to your Netflix and [delete as apropriate].</p>
+        Quarantine makes us all
+        <abbr title="In all the ways.">thirsty</abbr> and we've got a solution.
+        If you live in Marrickville, order a cocktail and we'll drop one over.
+        It'll come with the most beautiful block of ice you've ever seen, and a
+        garnish. There's no need to be drab if you're being domestic! Be fancy
+        for your Zoom happy hour, or add a bit of sparkle to your Netflix and
+        [delete as apropriate].
       </p>
       <h2>Where do we deliver?</h2>
       <p>If you're in the shaded bit, you're in luck!</p>
@@ -154,28 +161,27 @@
       <p>If you're outside, get in touch and make it worth our while.</p>
     </div>
     <p class="order-another">
-      <button class="button bears" id="bears-button">🐻 I want this website to have more bears!! 🐻</button>
+      <button class="button bears" id="bears-button">
+        🐻 I want this website to have more bears!! 🐻
+      </button>
       <script>
-        document.addEventListener(
-          "DOMContentLoaded",
-          function() {
-            document.getElementById("bears-button")
-                    .addEventListener("click",
-                      (ev)=>{
-                        ev.preventDefault();
-                        let b = ev.target
-                        if(b.classList.contains("bears")) {
-                          alert("Are you mad? There's so many bears already!");
-                          b.innerText = "🍸 OK, that's enough, put the drinks back 🍸";
-                        } else {
-                          b.innerText = "🐻 I want this website to have more bears!! 🐻";
-                        }
-                        b.classList.toggle("bears");
-                      });
-          });
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("bears-button")
+            .addEventListener("click", (ev) => {
+              ev.preventDefault();
+              let b = ev.target;
+              if (b.classList.contains("bears")) {
+                alert("Are you mad? There's so many bears already!");
+                b.innerText = "🍸 OK, that's enough, put the drinks back 🍸";
+              } else {
+                b.innerText = "🐻 I want this website to have more bears!! 🐻";
+              }
+              b.classList.toggle("bears");
+            });
+        });
       </script>
     </p>
-    
 
     <script src="https://www.paypal.com/sdk/js?client-id=AWAkDYSh0ymJrHZcahRurQCX_VcEftVKQfCGUsF4FHZZqM1Gd-eHCsotBdhGh5q7mJQw5wkJ-u0LRJJD"></script>
 
