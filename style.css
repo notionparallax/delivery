@@ -3,6 +3,7 @@
 
 :root {
   --sick-as-pink: hsla(297, 100%, 48%, 0.9);
+  --drink-base-height: 34vh;
 }
 
 body {
@@ -54,7 +55,6 @@ input[type="text"] {
 .drink {
   flex: 0 0 auto;
   display: inline-block;
-  height: 34vh;
   margin: 1vw;
   position: relative;
   vertical-align: bottom;
@@ -72,19 +72,27 @@ input[type="text"] {
 }
 .drink img {
   border-radius: 1em;
-  height: 100%;
+  height: var(--drink-base-height);
   object-fit: cover;
   width: 100%;
 }
+.drink img.paypal-spy-bullshit {
+  display: none;
+}
 .drink .label {
-  bottom: 0.5em;
+  display: flex;
   font-size: 125%;
+  height: 2em;
   left: 0.5em;
   position: absolute;
+  top: calc(var(--drink-base-height) - 2.5em);
   z-index: 500;
 }
+.drink .label span {
+  align-self: flex-end;
+}
 .drink .som-notes {
-  height: calc(100% - 2em);
+  height: calc(var(--drink-base-height) - 2em);
   width: calc(100% - 2em);
   left: 0;
   opacity: 0;
