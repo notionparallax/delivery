@@ -160,6 +160,13 @@ select {
   margin: auto;
   padding: 0 1em 4em;
 }
+.map {
+  background-image: url(deliveryArea.png);
+  background-position: 55% 55%;
+  background-size: 200%;
+  height: 50vh;
+  width: 100%;
+}
 
 /* thanks page */
 img.thanks-dude {
