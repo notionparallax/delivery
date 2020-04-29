@@ -237,11 +237,21 @@ p.order-another {
   background-size: 100%;
   -webkit-text-fill-color: transparent;
   font-family: "boobs", fantasy;
-  font-size: 3em;
+  font-size: 1.7em;
   line-height: 0.9;
   text-align: center;
   padding: 0.5em;
   margin: 1em 0.5em;
   border: 4px solid aliceblue;
   border-radius: 1em;
+}
+@media only screen and (min-device-width: 500px) and (max-device-width: 830px) {
+  .legal {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-device-width: 830px) {
+  .legal {
+    font-size: 3em;
+  }
 }
