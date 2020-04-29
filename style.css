@@ -224,3 +224,24 @@ p.order-another {
   background-color: hsla(0, 0%, 100%, 0.8);
   color: #e700f3;
 }
+
+@font-face {
+  /* https://www.fontspace.com/ji-solid-balloon-caps-font-f5466 */
+  font-family: "boobs";
+  src: url("JiSolidBalloonCaps-lddX.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+.legal {
+  -webkit-background-clip: text;
+  background-image: url(https://www.youjustmademylist.com/wp-content/uploads/2011/01/vintage_ron_jeremy.jpg);
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+  font-family: "boobs", fantasy;
+  font-size: 3em;
+  line-height: 0.9;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1em 0.5em;
+  border: 4px solid aliceblue;
+  border-radius: 1em;
+}
