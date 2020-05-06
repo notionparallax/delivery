@@ -1,66 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <!-- Add meta tags for mobile and IE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+---
+layout: default
+---
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="msapplication-config" content="favicon/browserconfig.xml" />
-    <meta name="theme-color" content="#ffd300" />
-
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-    <!-- PayPal BEGIN -->
-    <script>
-      (function (a, t, o, m, s) {
-        a[m] = a[m] || [];
-        a[m].push({ t: new Date().getTime(), event: "snippetRun" });
-        var f = t.getElementsByTagName(o)[0],
-          e = t.createElement(o),
-          d = m !== "paypalDDL" ? "&m=" + m : "";
-        e.async = !0;
-        e.src = "https://www.paypal.com/tagmanager/pptm.js?id=" + s + d;
-        f.parentNode.insertBefore(e, f);
-      })(
-        window,
-        document,
-        "script",
-        "paypalDDL",
-        "1355780b-b280-4100-980a-fb8ab003dfb3"
-      );
-    </script>
-    <!-- PayPal END -->
-  </head>
-
-  <body>
-    <h1>Mix Maison</h1>
-    <!-- <div class="drinks-container">
+ <div class="drinks-container"> 
       <div class="drink">
         <img src="https://placebear.com/300/300" />
         <div class="som-notes">
@@ -164,8 +106,8 @@
           />
         </form>
       </div>
-    </div> -->
-    <!-- <div class="explainer">
+    </div>
+    <div class="explainer">
       <h2>So, what's the deal here?</h2>
       <p>
         Quarantine makes us all
@@ -180,38 +122,40 @@
       <p>If you're in the shaded bit, you're in luck!</p>
       <div class="map"></div>
       <p>If you're outside, get in touch and make it worth our while.</p>
-    </div> -->
-    <p class="order-another">
-      <!-- <button class="button bears" id="bears-button">
-        🐻 I want this website to have more bears!! 🐻
-      </button> -->
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          document
-            .getElementById("bears-button")
-            .addEventListener("click", (ev) => {
-              ev.preventDefault();
-              let b = ev.target;
-              if (b.classList.contains("bears")) {
-                alert("Are you mad? There's so many bears already!");
-                b.innerText = "🍸 OK, that's enough, put the drinks back 🍸";
-              } else {
-                b.innerText = "🐻 I want this website to have more bears!! 🐻";
-              }
-              b.classList.toggle("bears");
-            });
-        });
-      </script>
-    </p>
+    </div> 
+<p class="order-another">
+  <button class="button bears" id="bears-button">
+      🐻 I want this website to have more bears!! 🐻
+    </button>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      try {
+        document
+          .getElementById("bears-button")
+          .addEventListener("click", (ev) => {
+            ev.preventDefault();
+            let b = ev.target;
+            if (b.classList.contains("bears")) {
+              alert("Are you mad? There's so many bears already!");
+              b.innerText = "🍸 OK, that's enough, put the drinks back 🍸";
+            } else {
+              b.innerText = "🐻 I want this website to have more bears!! 🐻";
+            }
+            b.classList.toggle("bears");
+          });
+      } catch (e) {
+        console.log(e, "errorz in with the bearz 🐻🐻🐻🐻");
+      }
+    });
+  </script>
+</p>
 
-    <!-- <div class="legal">
-      IT IS AGAINST THE LAW TO SELL OR SUPPLY ALCOHOL TO, OR TO OBTAIN ALCOHOL
-      ON BEHALF OF, A PERSON UNDER THE AGE OF 18 YEARS
-    </div> -->
+<div class="legal">
+    IT IS AGAINST THE LAW TO SELL OR SUPPLY ALCOHOL TO, OR TO OBTAIN ALCOHOL
+    ON BEHALF OF, A PERSON UNDER THE AGE OF 18 YEARS
+  </div>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AWAkDYSh0ymJrHZcahRurQCX_VcEftVKQfCGUsF4FHZZqM1Gd-eHCsotBdhGh5q7mJQw5wkJ-u0LRJJD"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AWAkDYSh0ymJrHZcahRurQCX_VcEftVKQfCGUsF4FHZZqM1Gd-eHCsotBdhGh5q7mJQw5wkJ-u0LRJJD"></script>
 
-    <!-- Include the PayPal JavaScript SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
-  </body>
-</html>
+<!-- Include the PayPal JavaScript SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
