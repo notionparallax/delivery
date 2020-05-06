@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <h1>Mix Maison</h1>
+
+    <div class="page-content {{page.type}} invisible">
+      <noscript>
+        <p>
+          Looks like you've got JS turned off. Quite a lot of things won't work
+          properly. ☹
+        </p>
+      </noscript>
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>
