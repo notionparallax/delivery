@@ -8,7 +8,7 @@
 
 body {
   background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
-  background-size: 100vw 100vh;
+  background-size: 100vw 300vh;
   color: white;
   font-family: "Concert One", cursive;
   font-size: 21px;
@@ -254,4 +254,15 @@ p.order-another {
   .legal {
     font-size: 3em;
   }
+}
+.serious {
+  font-family: cursive;
+}
+
+.launch-preview {
+  text-align: center;
+  padding: 0.5em;
+  margin: 1em 0.5em;
+  border: 4px solid aliceblue;
+  border-radius: 1em;
 }
