@@ -8,13 +8,18 @@
 
 body {
   background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
-  background-size: 100vw 300vh;
+  background-size: 100vw 400vh;
   color: white;
   font-family: "Concert One", cursive;
   font-size: 21px;
   line-height: 1.3;
   margin: 0;
   padding: 0 1em 10em 1em;
+}
+@media only screen and (min-device-width: 500px) and (max-device-width: 830px) {
+  body {
+    background-size: 100vw 1500vh;
+  }
 }
 div,
 p {
@@ -29,6 +34,10 @@ p {
 h1 {
   font-family: "Righteous", cursive;
   font-size: 300%;
+}
+a {
+  text-decoration: none;
+  color: hsl(54deg 100% 62%);
 }
 .pay {
   text-align: center;
@@ -203,7 +212,7 @@ body.thank-you-page {
 p.order-another {
   text-align: center;
 }
-.thank-you-page a {
+a {
   text-decoration: none;
   color: white;
 }
@@ -262,6 +271,7 @@ p.order-another {
 .launch-preview {
   text-align: center;
   padding: 0.5em;
+  padding-bottom: 3em;
   margin: 1em 0.5em;
   border: 4px solid aliceblue;
   border-radius: 1em;
