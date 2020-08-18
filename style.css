@@ -239,8 +239,14 @@ a {
   font-family: "boobs";
   src: url("JiSolidBalloonCaps-lddX.ttf") format("truetype"); /* Safari, Android, iOS */
 }
-
 .legal {
+  font-family: monospace;
+  transition: all 1s ease;
+  margin: auto;
+  margin-top: 15em;
+  max-width: 50%;
+}
+.legal:hover {
   -webkit-background-clip: text;
   background-image: url(https://www.youjustmademylist.com/wp-content/uploads/2011/01/vintage_ron_jeremy.jpg);
   background-size: 100%;
@@ -253,16 +259,20 @@ a {
   margin: 1em 0.5em;
   border: 4px solid aliceblue;
   border-radius: 1em;
+  max-width: 100%;
 }
 @media only screen and (min-device-width: 500px) and (max-device-width: 830px) {
-  .legal {
+  .legal:hover {
     font-size: 2.5em;
   }
 }
 @media only screen and (min-device-width: 830px) {
-  .legal {
+  .legal:hover {
     font-size: 3em;
   }
+}
+.legal li {
+  display: block;
 }
 .serious {
   font-family: cursive;
