@@ -513,3 +513,15 @@ a {
     transform: translateY(50px);
   }
 }
+
+/* Payment button */
+
+.checkout-button {
+  background-color: #6772e5;
+  border-radius: 4px;
+  border: 0;
+  color: #fff;
+  font-size: 1em;
+  padding: 8px 12px;
+  width: 100%;
+}
