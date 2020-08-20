@@ -1,4 +1,8 @@
-<div class="drink" id="{{ include.id }}">
+<div
+  class="drink cocktail"
+  id="{{ include.id }}"
+  data-stripeID="{{ include.stripe_sku }}"
+>
   <img src="https://placebear.com/300/30{{include.bearNum}}" />
   <div class="som-notes">
     <p>{{ include.ingredients }}</p>
