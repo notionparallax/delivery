@@ -38,6 +38,8 @@
     <meta name="theme-color" content="#ffd300" />
 
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://js.stripe.com/v3"></script>
   </head>
 
   <body>
@@ -46,99 +48,51 @@
     <div class="drinks-container">
       <!-- EW -->
       {% include drink.html id='EW' name='Esenchal Worker'
-      ingredients='Highball: gin, sencha, sherbert, lemon' bearNum='0'%}
+      ingredients='Highball: gin, sencha, sherbert, lemon' bearNum='0'
+      stripe_sku='price_1HI5gYGt8noXRi1MriuAUex1'
+      test_sku='price_1HI58XGt8noXRi1MgXmXZZew' %}
       <!-- AM -->
       {% include drink.html id='AM' name='Autoerotic Mastication'
-      ingredients='Highball: vodka, mastic, rosemary, lemon, soda' bearNum='1'%}
+      ingredients='Highball: vodka, mastic, rosemary, lemon, soda' bearNum='1'
+      stripe_sku='price_1HI5hoGt8noXRi1MnwlQdfaL'
+      test_sku='price_1HI58sGt8noXRi1MHuWcLERP' %}
       <!-- Sanitea -->
       {% include drink.html id='ST' name='Sanitea' ingredients='Straight up:
-      vodka, darjeeling, vermouth, lemon' bearNum='2'%}
+      vodka, darjeeling, vermouth, lemon' bearNum='2'
+      stripe_sku='price_1HI5jYGt8noXRi1M5BteiDl3'%}
       <!-- Zoom Date -->
       {% include drink.html id='ST' name='Zoom Date' ingredients='On a rock:
-      bourbon, date, bitters' bearNum='3'%}
+      bourbon, date, bitters' bearNum='3'
+      stripe_sku='price_1HI2fTGt8noXRi1M5yJpmV2I'%}
       <!-- Vaccine -->
       {% include drink.html id='ST' name='Vaccine' ingredients='Frozen: tequila,
-      jalapeno, strawberry' bearNum='4'%}
-      <div class="drink">
-        <img src="https://placebear.com/300/304" />
-        <div class="som-notes">
-          <p>Frozen: tequila, jalapeno, strawberry</p>
-        </div>
-        <div class="label"><span>Vaccine</span></div>
-      </div>
+      jalapeno, strawberry' bearNum='4'
+      stripe_sku='price_1HI2ajGt8noXRi1MAJqPwOn7'%}
       <div class="drink">
         <p class="instructions">
-          Pick the cocktail you want and add it to your wino's shopping trolley.
-          If you want more than one, just keep adding.
+          Pick the cocktails you want and add it to your wino's shopping
+          trolley.
         </p>
-        <form
-          class="pay"
-          target="paypal"
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
+        <p class="instructions">
+          You can't order for today yet, so tell us when you want us to come.
+        </p>
+        <button
+          id="checkout-button"
+          role="link"
+          type="button"
+          class="checkout-button"
         >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="XU6HBLETMHXKW" />
-          <table>
-            <tr>
-              <td>
-                <input type="hidden" name="on0" value="Drinkie 1" />Pick a
-                cocktail
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <select name="os0">
-                  <option value="Esenchal Worker"
-                    >Esenchal Worker $10.00 AUD</option
-                  >
-                  <option value="Autoerotic Mastication"
-                    >Autoerotic Mastication $10.00 AUD</option
-                  >
-                  <option value="Sanitea">Sanitea $10.00 AUD</option>
-                  <option value="Zoom date">Zoom date $10.00 AUD</option>
-                  <option value="Vaccine">Vaccine $10.00 AUD</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input
-                  type="hidden"
-                  name="on1"
-                  value="Special timing or requests?"
-                />Special timing or requests? You can't order for today yet, so
-                tell us when you want us to come.
-              </td>
-            </tr>
-            <tr>
-              <td><input type="text" name="os1" maxlength="200" /></td>
-            </tr>
-          </table>
-          <input type="hidden" name="currency_code" value="AUD" />
-          <input
-            type="image"
-            src="https://www.paypalobjects.com/en_AU/i/btn/btn_cart_LG.gif"
-            border="0"
-            name="submit"
-            alt="PayPal – The safer, easier way to pay online!"
-          />
-          <img
-            alt=""
-            border="0"
-            src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif"
-            width="1"
-            height="1"
-            class="paypal-spy-bullshit"
-          />
-        </form>
+          Checkout
+        </button>
+
+        <div id="error-message"></div>
       </div>
     </div>
     <div class="explainer">
       <div class="launch-preview">
         <h1>Launch Preview</h1>
         <p>
-          All cocktails are $18 normally, but until the 18<sup>th</sup>, as our
+          All cocktails are $18 normally, but until the 28<sup>th</sup>, as our
           launch special, drinkies are...ten bucks!!
         </p>
       </div>
@@ -202,6 +156,7 @@
       <p>ABN: 96619795851</p>
     </div>
 
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="payments.js" type="text/javascript"></script>
   </body>
 </html>
