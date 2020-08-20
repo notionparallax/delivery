@@ -62,36 +62,21 @@
     {% include fyb.html %}
     <h1>Mix Maison</h1>
     <div class="drinks-container">
-      <div class="drink">
-        <img src="https://placebear.com/300/300" />
-        <div class="som-notes">
-          <p>Highball: gin, sencha, sherbert, lemon</p>
-        </div>
-        <div class="label"><span>Esenchal Worker</span></div>
-      </div>
-      <div class="drink">
-        <img src="https://placebear.com/300/301" />
-        <div class="som-notes">
-          <p>
-            Highball: vodka, mastic, rosemary, lemon, soda
-          </p>
-        </div>
-        <div class="label"><span>Autoerotic Mastication</span></div>
-      </div>
-      <div class="drink">
-        <img src="https://placebear.com/300/302" />
-        <div class="som-notes">
-          <p>
-            Straight up: vodka, darjeeling, vermouth, lemon
-          </p>
-        </div>
-        <div class="label"><span>Sanitea</span></div>
-      </div>
-      <div class="drink">
-        <img src="https://placebear.com/300/303" />
-        <div class="som-notes"><p>On a rock: bourbon, date, bitters</p></div>
-        <div class="label"><span>Zoom Date</span></div>
-      </div>
+      <!-- EW -->
+      {% include drink.html id='EW' name='Esenchal Worker'
+      ingredients='Highball: gin, sencha, sherbert, lemon' bearNum='0'%}
+      <!-- AM -->
+      {% include drink.html id='AM' name='Autoerotic Mastication'
+      ingredients='Highball: vodka, mastic, rosemary, lemon, soda' bearNum='1'%}
+      <!-- Sanitea -->
+      {% include drink.html id='ST' name='Sanitea' ingredients='Straight up:
+      vodka, darjeeling, vermouth, lemon' bearNum='2'%}
+      <!-- Zoom Date -->
+      {% include drink.html id='ST' name='Zoom Date' ingredients='On a rock:
+      bourbon, date, bitters' bearNum='3'%}
+      <!-- Vaccine -->
+      {% include drink.html id='ST' name='Vaccine' ingredients='Frozen: tequila,
+      jalapeno, strawberry' bearNum='4'%}
       <div class="drink">
         <img src="https://placebear.com/300/304" />
         <div class="som-notes">
