@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,176 +39,60 @@
 
     <link href="style.css" rel="stylesheet" type="text/css" />
 
-    <!-- PayPal BEGIN -->
-    <script>
-      (function (a, t, o, m, s) {
-        a[m] = a[m] || [];
-        a[m].push({ t: new Date().getTime(), event: "snippetRun" });
-        var f = t.getElementsByTagName(o)[0],
-          e = t.createElement(o),
-          d = m !== "paypalDDL" ? "&m=" + m : "";
-        e.async = !0;
-        e.src = "https://www.paypal.com/tagmanager/pptm.js?id=" + s + d;
-        f.parentNode.insertBefore(e, f);
-      })(
-        window,
-        document,
-        "script",
-        "paypalDDL",
-        "1355780b-b280-4100-980a-fb8ab003dfb3"
-      );
-    </script>
-    <!-- PayPal END -->
+    <script src="https://js.stripe.com/v3"></script>
   </head>
 
   <body>
-    <!-- 
-          /$$          /$$$$$$$$                  /$$                            /$$           
-  /$$$$$$       | $$_____/                 | $$                          /$$$$$$         
- /$$__  $$      | $$    /$$   /$$  /$$$$$$$| $$   /$$                   /$$__  $$        
-| $$  \__/      | $$$$$| $$  | $$ /$$_____/| $$  /$$/                  | $$  \__/        
-|  $$$$$$       | $$__/| $$  | $$| $$      | $$$$$$/                   |  $$$$$$         
- \____  $$      | $$   | $$  | $$| $$      | $$_  $$                    \____  $$        
- /$$  \ $$      | $$   |  $$$$$$/|  $$$$$$$| $$ \  $$                   /$$  \ $$        
-|  $$$$$$/      |__/    \______/  \_______/|__/  \__/                  |  $$$$$$/        
- \_  $$_/                                                               \_  $$_/         
-   \__/                                                                   \__/           
-                                                                                         
-    /$$          /$$     /$$                  /$$                            /$$         
-  /$$$$$$       |  $$   /$$/                 | $$                          /$$$$$$       
- /$$__  $$       \  $$ /$$//$$$$$$   /$$$$$$ | $$$$$$$                    /$$__  $$      
-| $$  \__/        \  $$$$//$$__  $$ |____  $$| $$__  $$                  | $$  \__/      
-|  $$$$$$          \  $$/| $$$$$$$$  /$$$$$$$| $$  \ $$                  |  $$$$$$       
- \____  $$          | $$ | $$_____/ /$$__  $$| $$  | $$                   \____  $$      
- /$$  \ $$          | $$ |  $$$$$$$|  $$$$$$$| $$  | $$                   /$$  \ $$      
-|  $$$$$$/          |__/  \_______/ \_______/|__/  |__/                  |  $$$$$$/      
- \_  $$_/                                                                 \_  $$_/       
-   \__/                                                                     \__/         
-                                                                                         
-    /$$          /$$$$$$$                                          /$$          /$$      
-  /$$$$$$       | $$__  $$                                        | $$        /$$$$$$    
- /$$__  $$      | $$  \ $$  /$$$$$$   /$$$$$$  /$$$$$$$$  /$$$$$$ | $$       /$$__  $$   
-| $$  \__/      | $$$$$$$  /$$__  $$ /$$__  $$|____ /$$/ /$$__  $$| $$      | $$  \__/   
-|  $$$$$$       | $$__  $$| $$  \ $$| $$  \ $$   /$$$$/ | $$$$$$$$|__/      |  $$$$$$    
- \____  $$      | $$  \ $$| $$  | $$| $$  | $$  /$$__/  | $$_____/           \____  $$   
- /$$  \ $$      | $$$$$$$/|  $$$$$$/|  $$$$$$/ /$$$$$$$$|  $$$$$$$ /$$       /$$  \ $$   
-|  $$$$$$/      |_______/  \______/  \______/ |________/ \_______/|__/      |  $$$$$$/   
- \_  $$_/                                                                    \_  $$_/    
-   \__/                                                                        \__/      
-                                                                                         
-     -->
+    {% include fyb.html %}
     <h1>Mix Maison</h1>
     <div class="drinks-container">
-      <div class="drink">
-        <img src="https://placebear.com/300/300" />
-        <div class="som-notes">
-          <p>Highball: gin, sencha, sherbert, lemon</p>
-        </div>
-        <div class="label"><span>Esenchal Worker</span></div>
-      </div>
-      <div class="drink">
-        <img src="https://placebear.com/300/301" />
-        <div class="som-notes">
-          <p>
-            Highball: vodka, mastic, rosemary, lemon, soda
-          </p>
-        </div>
-        <div class="label"><span>Autoerotic Mastication</span></div>
-      </div>
-      <div class="drink">
-        <img src="https://placebear.com/300/302" />
-        <div class="som-notes">
-          <p>
-            Straight up: vodka, darjeeling, vermouth, lemon
-          </p>
-        </div>
-        <div class="label"><span>Sanitea</span></div>
-      </div>
-      <div class="drink">
-        <img src="https://placebear.com/300/303" />
-        <div class="som-notes"><p>On a rock: bourbon, date, bitters</p></div>
-        <div class="label"><span>Zoom Date</span></div>
-      </div>
-      <div class="drink">
-        <img src="https://placebear.com/300/304" />
-        <div class="som-notes">
-          <p>Frozen: tequila, jalapeno, strawberry</p>
-        </div>
-        <div class="label"><span>Vaccine</span></div>
-      </div>
+      <!-- EW -->
+      {% include drink.html id='EW' name='Esenchal Worker'
+      ingredients='Highball: gin, sencha, sherbert, lemon' bearNum='0'
+      stripe_sku='price_1HI5gYGt8noXRi1MriuAUex1'
+      test_sku='price_1HI58XGt8noXRi1MgXmXZZew' %}
+      <!-- AM -->
+      {% include drink.html id='AM' name='Autoerotic Mastication'
+      ingredients='Highball: vodka, mastic, rosemary, lemon, soda' bearNum='1'
+      stripe_sku='price_1HI5hoGt8noXRi1MnwlQdfaL'
+      test_sku='price_1HI58sGt8noXRi1MHuWcLERP' %}
+      <!-- Sanitea -->
+      {% include drink.html id='ST' name='Sanitea' ingredients='Straight up:
+      vodka, darjeeling, vermouth, lemon' bearNum='2'
+      stripe_sku='price_1HI5jYGt8noXRi1M5BteiDl3'%}
+      <!-- Zoom Date -->
+      {% include drink.html id='ST' name='Zoom Date' ingredients='On a rock:
+      bourbon, date, bitters' bearNum='3'
+      stripe_sku='price_1HI2fTGt8noXRi1M5yJpmV2I'%}
+      <!-- Vaccine -->
+      {% include drink.html id='ST' name='Vaccine' ingredients='Frozen: tequila,
+      jalapeno, strawberry' bearNum='4'
+      stripe_sku='price_1HI2ajGt8noXRi1MAJqPwOn7'%}
       <div class="drink">
         <p class="instructions">
-          Pick the cocktail you want and add it to your wino's shopping trolley.
-          If you want more than one, just keep adding.
+          Pick the cocktails you want and add it to your wino's shopping
+          trolley.
         </p>
-        <form
-          class="pay"
-          target="paypal"
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
+        <p class="instructions">
+          You can't order for today yet, so tell us when you want us to come.
+        </p>
+        <button
+          id="checkout-button"
+          role="link"
+          type="button"
+          class="checkout-button"
         >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="XU6HBLETMHXKW" />
-          <table>
-            <tr>
-              <td>
-                <input type="hidden" name="on0" value="Drinkie 1" />Pick a
-                cocktail
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <select name="os0">
-                  <option value="Esenchal Worker"
-                    >Esenchal Worker $10.00 AUD</option
-                  >
-                  <option value="Autoerotic Mastication"
-                    >Autoerotic Mastication $10.00 AUD</option
-                  >
-                  <option value="Sanitea">Sanitea $10.00 AUD</option>
-                  <option value="Zoom date">Zoom date $10.00 AUD</option>
-                  <option value="Vaccine">Vaccine $10.00 AUD</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input
-                  type="hidden"
-                  name="on1"
-                  value="Special timing or requests?"
-                />Special timing or requests? You can't order for today yet, so
-                tell us when you want us to come.
-              </td>
-            </tr>
-            <tr>
-              <td><input type="text" name="os1" maxlength="200" /></td>
-            </tr>
-          </table>
-          <input type="hidden" name="currency_code" value="AUD" />
-          <input
-            type="image"
-            src="https://www.paypalobjects.com/en_AU/i/btn/btn_cart_LG.gif"
-            border="0"
-            name="submit"
-            alt="PayPal – The safer, easier way to pay online!"
-          />
-          <img
-            alt=""
-            border="0"
-            src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif"
-            width="1"
-            height="1"
-            class="paypal-spy-bullshit"
-          />
-        </form>
+          Checkout
+        </button>
+
+        <div id="error-message"></div>
       </div>
     </div>
     <div class="explainer">
       <div class="launch-preview">
         <h1>Launch Preview</h1>
         <p>
-          All cocktails are $18 normally, but until the 18<sup>th</sup>, as our
+          All cocktails are $18 normally, but until the 28<sup>th</sup>, as our
           launch special, drinkies are...ten bucks!!
         </p>
       </div>
@@ -269,9 +156,7 @@
       <p>ABN: 96619795851</p>
     </div>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AWAkDYSh0ymJrHZcahRurQCX_VcEftVKQfCGUsF4FHZZqM1Gd-eHCsotBdhGh5q7mJQw5wkJ-u0LRJJD"></script>
-
-    <!-- Include the PayPal JavaScript SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="payments.js" type="text/javascript"></script>
   </body>
 </html>
