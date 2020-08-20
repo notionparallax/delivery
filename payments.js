@@ -83,7 +83,67 @@ function ctrls(parent) {
 }
 
 // init
-document.querySelectorAll(".drink").forEach((el) => {
+document.querySelectorAll(".drink.cocktail").forEach((el) => {
+  console.log(`setting up spinner for ${el.innerText}`);
   var controls = new ctrls(el);
   document.addEventListener("DOMContentLoaded", controls.ready);
 });
+
+// stripe stuff
+
+(function () {
+  //   var stripe = Stripe(
+  //     "pk_test_51HHzmuGt8noXRi1M0vCnMphSTEXckl6Iv5xhIwwFvnD6l8NWrZBYeHUIBehJJWv2gHKq1g68XpZZrguUjnZFTQIy00cZkSLPBH"
+  //   );
+  var stripe = Stripe(
+    "pk_live_51HHzmuGt8noXRi1MPLP0MThkckQTBCwHe0ndksR88Xf9HSIs63PTdw89k0tCSNIIuOsko8pIvPWmY1RgPh5vyaXt00bmxKNDUU"
+  );
+
+  var checkoutButton = document.getElementById("checkout-button");
+  checkoutButton.addEventListener("click", function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    let cart = [];
+    document.querySelectorAll(".drink.cocktail").forEach((el) => {
+      const quantity = parseInt(
+        el.querySelector(".ctrl__counter-num").dataset.num,
+        10
+      );
+      if (quantity > 0) {
+        cart.push({ price: el.dataset.stripeid, quantity: quantity });
+      }
+    });
+    console.log(cart);
+    if (cart.length === 0) {
+      alert(
+        "I'm sure you're very virtuous, by not drinking, but if you " +
+          "want us to deliver you cocktails, you'll have to tell us " +
+          "what you want"
+      );
+    } else {
+      stripe
+        .redirectToCheckout({
+          shippingAddressCollection: {
+            allowedCountries: ["AU"],
+          },
+          lineItems: cart,
+          mode: "payment",
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfillment
+          successUrl: "https://mixmaison.club/thanks",
+          cancelUrl: "https://mixmaison.club/",
+        })
+        .then(function (result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById("error-message");
+            displayError.textContent = result.error.message;
+          }
+        });
+    }
+  });
+})();
