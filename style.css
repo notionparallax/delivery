@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Righteous&family=Titan+One&display=swap");
-@import url(https://reset5.googlecode.com/hg/reset.min.css);
 
 :root {
   --sick-as-pink: hsla(297, 100%, 48%, 0.9);
@@ -98,9 +97,7 @@ input[type="text"] {
   object-fit: cover;
   width: 100%;
 }
-.drink img.paypal-spy-bullshit {
-  display: none;
-}
+
 .drink .label {
   display: flex;
   font-size: 125%;
@@ -221,6 +218,11 @@ body.thank-you-page {
 .thank-you-page p {
   padding-right: 2em;
   margin-bottom: 1em;
+  max-width: 25em;
+}
+.thank-you-page .fyi {
+  font-size: 80%;
+  margin-top: 5em;
 }
 p.order-another {
   text-align: center;
