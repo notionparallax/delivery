@@ -198,8 +198,9 @@ select {
 /* thanks page */
 img.thanks-dude {
   float: right;
-  padding-right: 2em;
+  height: 14em;
   max-width: calc(100vw - 2em);
+  padding-right: 2em;
 }
 body.thank-you-page {
   background: linear-gradient(113deg, #0bd9a4, #e700f3, #f38300, #f3c300);
