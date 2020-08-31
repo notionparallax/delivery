@@ -214,6 +214,10 @@ body.thank-you-page {
   animation-play-state: running;
   animation-name: sexySlide;
 }
+.thank-you-page iframe {
+  width: 100%;
+  max-width: 40em;
+}
 
 .thank-you-page p {
   padding-right: 2em;
