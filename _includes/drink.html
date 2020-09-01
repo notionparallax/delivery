@@ -2,8 +2,9 @@
   class="drink cocktail"
   id="{{ include.id }}"
   data-stripeID="{{ include.stripe_sku }}"
+  style="background-image: url(https://placebear.com/300/30{{include.bearNum}});"
 >
-  <img src="https://placebear.com/300/30{{include.bearNum}}" />
+  <img src="./img/{{include.image}}" />
   <div class="som-notes">
     <p>{{ include.ingredients }}</p>
   </div>

@@ -74,13 +74,16 @@ input[type="text"] {
   width: 100%;
 }
 .drink {
-  flex: 0 0 auto;
+  background-size: cover;
+  border-radius: 1em;
   display: inline-block;
+  flex: 0 0 auto;
+  height: var(--drink-base-height);
   margin: 1vw;
   position: relative;
   vertical-align: bottom;
-  width: 100%;
 }
+
 @media only screen and (min-device-width: 500px) and (max-device-width: 830px) {
   .drink {
     width: 47.5%;
@@ -91,6 +94,10 @@ input[type="text"] {
     width: 30%;
   }
 }
+.with-bears .drink img {
+  display: none;
+}
+
 .drink img {
   border-radius: 1em;
   height: var(--drink-base-height);

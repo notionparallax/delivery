@@ -48,25 +48,26 @@
     <div class="drinks-container">
       <!-- EW -->
       {% include drink.html id='EW' name='Esenchal Worker'
-      ingredients='Highball: gin, sencha, sherbert, lemon' bearNum='0'
+      ingredients='Highball: gin, sencha, sherbert, lemon' bearNum='0' image="ZD
+      prod 3.jpg" image="EW prod 3.jpg"
       stripe_sku='price_1HLGIfGt8noXRi1M3R8YUdmI'
       test_sku='price_1HI58XGt8noXRi1MgXmXZZew' %}
+      <!-- Sanitea -->
+      <!-- {% include drink.html id='ST' name='Sanitea' ingredients='Straight up:
+      vodka, darjeeling, vermouth, lemon' bearNum='2' image="ZD prod 3.jpg"
+      stripe_sku='price_1HLGHWGt8noXRi1MgN6zYRc8'%} -->
       <!-- AM -->
       {% include drink.html id='AM' name='Autoerotic Mastication'
       ingredients='Highball: vodka, mastic, rosemary, lemon, soda' bearNum='1'
-      stripe_sku='price_1HLGI0Gt8noXRi1ML5pIudrQ'
+      image="AM prod 2.jpg" stripe_sku='price_1HLGI0Gt8noXRi1ML5pIudrQ'
       test_sku='price_1HI58sGt8noXRi1MHuWcLERP' %}
-      <!-- Sanitea -->
-      {% include drink.html id='ST' name='Sanitea' ingredients='Straight up:
-      vodka, darjeeling, vermouth, lemon' bearNum='2'
-      stripe_sku='price_1HLGHWGt8noXRi1MgN6zYRc8'%}
       <!-- Zoom Date -->
       {% include drink.html id='ST' name='Zoom Date' ingredients='On a rock:
-      bourbon, date, bitters' bearNum='3'
+      bourbon, date, bitters' bearNum='3' image="ZD prod 3.jpg"
       stripe_sku='price_1HLGJgGt8noXRi1MyLurlzA9'%}
       <!-- Vaccine -->
       {% include drink.html id='ST' name='Vaccine' ingredients='Frozen: tequila,
-      jalapeno, strawberry' bearNum='4'
+      jalapeno, strawberry' bearNum='4' image="Vacc prod 1.jpg"
       stripe_sku='price_1HLGJzGt8noXRi1MoWqnwhIs'%}
       <div class="drink instructions">
         <p>
@@ -75,7 +76,7 @@
         </p>
         <p>
           All cocktails are $18. We'll give you $2 for each bottle you give us
-          back when we drop off your _next_ order.
+          back when we drop off your <em>next</em> order.
         </p>
         <p>
           You can't order for today yet, so we'll get in touch and get the
@@ -122,9 +123,9 @@
       <p>If you're outside, get in touch and make it worth our while.</p>
     </div>
     <p class="order-another">
-      <!-- <button class="button bears" id="bears-button">
+      <button class="button bears" id="bears-button">
         🐻 I want this website to have more bears!! 🐻
-      </button> -->
+      </button>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           document
@@ -133,12 +134,13 @@
               ev.preventDefault();
               let b = ev.target;
               if (b.classList.contains("bears")) {
-                alert("Are you mad? There's so many bears already!");
+                // alert("Are you mad? There's so many bears already!");
                 b.innerText = "🍸 OK, that's enough, put the drinks back 🍸";
               } else {
                 b.innerText = "🐻 I want this website to have more bears!! 🐻";
               }
               b.classList.toggle("bears");
+              document.body.classList.toggle("with-bears");
             });
         });
       </script>
