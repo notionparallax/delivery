@@ -80,6 +80,7 @@ input[type="text"] {
   flex: 0 0 auto;
   height: var(--drink-base-height);
   margin: 1vw;
+  width: 100%;
   position: relative;
   vertical-align: bottom;
 }
@@ -315,6 +316,12 @@ a {
 }
 
 /* spinners */
+.ctrl-wrapper {
+  position: absolute;
+  outline: 1px solid orange;
+  width: 100%;
+  top: 0;
+}
 .ctrl {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -337,6 +344,7 @@ a {
   width: 100%;
   z-index: 200;
   pointer-events: none;
+  position: relative;
 }
 
 .ctrl__counter {
@@ -385,10 +393,10 @@ a {
   line-height: 100px;
   text-align: center;
   color: #fff;
-  cursor: pointer;
-  /* background-color: #8498a7; */
+  background-color: #8498a780;
   -webkit-transition: background-color 100ms ease-in;
   transition: background-color 100ms ease-in;
+  position: absolute;
   pointer-events: auto;
 }
 
@@ -407,11 +415,13 @@ a {
 .ctrl__button--decrement {
   border-radius: 0 1em 1em 0;
   cursor: zoom-out;
+  left: 0;
 }
 
 .ctrl__button--increment {
   border-radius: 1em 0 0 1em;
   cursor: zoom-in;
+  right: 0;
 }
 .ctrl__counter-num {
   position: absolute;
