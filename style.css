@@ -57,6 +57,7 @@ h1 {
 a {
   text-decoration: none;
   color: hsl(54deg 100% 62%);
+  filter: drop-shadow(3px 3px 1px orange);
 }
 .pay {
   text-align: center;
