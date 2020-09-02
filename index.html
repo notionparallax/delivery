@@ -46,6 +46,10 @@
     {% include fyb.html %}
     <h1>Mix Maison</h1>
     <div class="drinks-container">
+      <!-- Vaccine -->
+      {% include drink.html id='ST' name='Vaccine' ingredients='Frozen: tequila,
+      jalapeno, strawberry' bearNum='4' image="Vacc prod 1.jpg"
+      stripe_sku='price_1HLGJzGt8noXRi1MoWqnwhIs'%}
       <!-- EW -->
       {% include drink.html id='EW' name='Esenchal Worker'
       ingredients='Highball: gin, sencha, sherbert, lemon' bearNum='0' image="ZD
@@ -65,10 +69,7 @@
       {% include drink.html id='ST' name='Zoom Date' ingredients='On a rock:
       bourbon, date, bitters' bearNum='3' image="ZD prod 3.jpg"
       stripe_sku='price_1HLGJgGt8noXRi1MyLurlzA9'%}
-      <!-- Vaccine -->
-      {% include drink.html id='ST' name='Vaccine' ingredients='Frozen: tequila,
-      jalapeno, strawberry' bearNum='4' image="Vacc prod 1.jpg"
-      stripe_sku='price_1HLGJzGt8noXRi1MoWqnwhIs'%}
+
       <div class="drink instructions">
         <p>
           Pick the cocktails you want and add it to your wino's shopping
@@ -78,10 +79,7 @@
           All cocktails are $18. We'll give you $2 for each bottle you give us
           back when we drop off your <em>next</em> order.
         </p>
-        <p>
-          You can't order for today yet, so we'll get in touch and get the
-          details.
-        </p>
+        <p>You can't order for today, so plan ahead, be classy.</p>
         <button
           id="checkout-button"
           role="link"
