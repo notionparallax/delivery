@@ -182,7 +182,14 @@ input[type="text"] {
   display: inline;
   /* outline: 7px solid var(--sick-as-pink); */
 }
-
+.instagram .logo {
+  height: 3rem;
+  float: left;
+  margin-right: 1rem;
+}
+.instagram {
+  margin-bottom: 2rem;
+}
 select {
   width: 100%;
 }
