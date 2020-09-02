@@ -2,7 +2,8 @@
 
 :root {
   --sick-as-pink: hsla(297, 100%, 48%, 0.9);
-  --drink-base-height: 34vh;
+  --drink-base-height: 18rem;
+  /* --drink-base-height: 34vh; */
 }
 
 body {
