@@ -84,23 +84,22 @@ input[type="text"] {
 .drink {
   background-size: cover;
   border-radius: 1em;
-  display: inline-block;
   flex: 0 0 auto;
   height: var(--drink-base-height);
-  margin: 1vw;
+  margin: 1rem 0;
   width: 100%;
   position: relative;
   vertical-align: bottom;
 }
 
-@media only screen and (min-device-width: 500px) and (max-device-width: 830px) {
+@media only screen and (min-device-width: 700px) and (max-device-width: 830px) {
   .drink {
     width: 47.5%;
   }
 }
 @media only screen and (min-device-width: 830px) {
   .drink {
-    width: 30%;
+    width: 31%;
   }
 }
 .with-bears .drink img {
