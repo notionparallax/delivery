@@ -63,13 +63,13 @@ a {
   text-align: center;
 }
 .drinks-container {
-  max-width: 50em;
+  max-width: 70rem;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  align-items: auto;
+  align-items: center;
   align-content: start;
 }
 .instructions p {
@@ -188,7 +188,7 @@ input[type="text"] {
   margin-right: 1rem;
 }
 .instagram {
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 select {
   width: 100%;
@@ -208,7 +208,10 @@ select {
 .explainer {
   max-width: 26em;
   margin: auto;
-  padding: 0 1em 4em;
+  padding: 0 1em;
+}
+.the-drinks-title {
+  text-align: center;
 }
 .map {
   background-image: url(deliveryArea.png);

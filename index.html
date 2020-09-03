@@ -44,12 +44,15 @@
 
   <body>
     {% include fyb.html %}
-    <h1>Mix Maison</h1>
-    <p>
-      Delicious cocktails, for <a href="#where">local people</a>.<br />If Uber
-      Eats and a Happy Meal had a baby, and it was raised classy, that'd be us.
-    </p>
-    <h2>The drinks</h2>
+    <div class="explainer">
+      <h1>Mix Maison</h1>
+      <p>
+        Delicious cocktails, for <a href="#where">local people</a>.<br />If Uber
+        Eats and a Happy Meal had a baby, and it was raised classy, that'd be
+        us.
+      </p>
+      <h2 class="the-drinks-title">The Drinks</h2>
+    </div>
     <div class="drinks-container">
       <!-- Vaccine -->
       {% include drink.html id='ST' name='Vaccine' ingredients='Frozen: tequila,
@@ -124,13 +127,15 @@
       <p>If you're in the shaded bit, you're in luck!</p>
       <div class="map"></div>
       <p>If you're outside, get in touch and make it worth our while.</p>
-    </div>
-    <div class="instagram">
-      <a href="https://www.instagram.com/mixmaison/"
-        >{% include insty.html class="logo"%} Check us out on instagram, we're
-        very cool, but more like ice than like</a
-      >
-      <a href="https://www.instagram.com/influencersinthewild/">influencers</a>
+      <div class="instagram">
+        <a href="https://www.instagram.com/mixmaison/"
+          >{% include insty.html class="logo"%} Check us out on instagram, we're
+          very cool, but more like ice than like</a
+        >
+        <a href="https://www.instagram.com/influencersinthewild/"
+          >influencers</a
+        >
+      </div>
     </div>
     <p class="order-another">
       <button class="button bears" id="bears-button">
