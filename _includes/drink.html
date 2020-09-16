@@ -4,7 +4,10 @@
   data-stripeID="{{ include.stripe_sku }}"
   style="background-image: url(https://placebear.com/300/30{{include.bearNum}});"
 >
-  <img src="./img/{{include.image}}" />
+  <picture>
+    <source srcset="./img/{{include.image}}@2x.png 2x" />
+    <img src="./img/{{include.image}}@1x.png" />
+  </picture>
   <div class="som-notes">
     <p>{{ include.ingredients }}</p>
   </div>
